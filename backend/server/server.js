@@ -5,7 +5,6 @@ const path = require("path");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 
-//require("dotenv").config();
 require("dotenv").config({ path: "../.env" });
 
 
@@ -30,7 +29,7 @@ function writeUsers(users) {
   fs.writeFileSync(filePath, JSON.stringify(users, null, 2));
 }
 
-//function to authenticate is the change made"
+//function to authenticate is the change made by me"
 function authenticate(req, res, next) {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1]; 
